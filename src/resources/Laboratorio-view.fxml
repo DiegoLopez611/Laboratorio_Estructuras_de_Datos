@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GrafoController">
+    <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="900.0">
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="btnPanelComparar" layoutY="394.0" minHeight="50.0" mnemonicParsing="false" onAction="#mostrarPanelComparar" prefWidth="200.0" style="-fx-background-color: #000000;" text="Comparar Arboles" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnPanelMetodos" layoutX="2.0" layoutY="314.0" minHeight="50.0" mnemonicParsing="false" onAction="#mostrarPanelMetodos" prefWidth="200.0" style="-fx-background-color: #000000;" text="Metodos Arboles" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="59.0" layoutY="156.0" text="ÁRBOLES" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft YaHei UI Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="126.0" text="LABORATORIO" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft Yi Baiti" size="25.0" />
+                           </font>
+                        </Label>
+                        <Line endX="73.0" layoutX="115.0" layoutY="193.0" startX="-100.0" stroke="WHITE" />
+                        <Button fx:id="btnPanelCrearGrafo" layoutY="229.0" minHeight="50.0" mnemonicParsing="false" onAction="#mostrarPanelCrearGrafo" prefWidth="200.0" style="-fx-background-color: #000000;" text="Crear Arbol" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <top>
+                  <AnchorPane prefHeight="40.0" prefWidth="900.0" style="-fx-background-color: #61c5fc;" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8d8d8d;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="panelMetodos" layoutX="13.0" layoutY="15.0" prefHeight="530.0" prefWidth="670.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                           <children>
+                              <ComboBox fx:id="comboArboles" layoutX="229.0" layoutY="225.0" prefHeight="40.0" prefWidth="244.0" />
+                              <Button fx:id="btnAltura" layoutX="54.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnAlturaClicked" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #61c5fc;" text="Obtener Altura" textFill="WHITE" />
+                              <Button fx:id="btnNivelElemento" layoutX="292.0" layoutY="451.0" mnemonicParsing="false" onAction="#btnNivelElementoClicked" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #61c5fc;" text="Nivel del Elemento" textFill="WHITE" />
+                              <Button fx:id="btnNumeroHojas" layoutX="54.0" layoutY="375.0" mnemonicParsing="false" onAction="#btnNmeroHojasClicked" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #61c5fc;" text="Numero de Hojas" textFill="WHITE" />
+                              <Button fx:id="btnValorPequeño" layoutX="54.0" layoutY="442.0" mnemonicParsing="false" onAction="#btnValorPequeñoClicked" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #61c5fc;" text="Valor Más Pequeño" textFill="WHITE" />
+                              <Button fx:id="btnImprimir" layoutX="503.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnImprimirClicked" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #61c5fc;" text="Imprimir" textFill="WHITE" />
+                              <Button fx:id="btnEliminar" layoutX="292.0" layoutY="340.0" mnemonicParsing="false" onAction="#btnEliminarElementoClicked" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #61c5fc;" text="Eliminar Elemento" textFill="WHITE" />
+                              <Button fx:id="btnRecorridoAmplitud" layoutX="503.0" layoutY="442.0" mnemonicParsing="false" onAction="#btnRecorridoAmplitudClicked" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #61c5fc;" text="Recorrido Amplitud" textFill="WHITE" />
+                              <TextField fx:id="txtValorEliminar" alignment="CENTER" layoutX="277.0" layoutY="294.0" promptText="Valor a Eliminar" />
+                              <TextField fx:id="txtValorNodo" alignment="CENTER" layoutX="277.0" layoutY="403.0" promptText="Ingrese un Nodo" />
+                              <Label fx:id="txtRespuesta" layoutX="213.0" layoutY="131.0" prefHeight="30.0" prefWidth="366.0" text="Respuesta" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="panelComparar" layoutX="13.0" layoutY="15.0" prefHeight="530.0" prefWidth="670.0" style="-fx-background-color: #FFFFFF;" visible="false">
+                           <children>
+                              <ComboBox fx:id="comboArboles1" layoutX="229.0" layoutY="152.0" prefHeight="40.0" prefWidth="244.0" />
+                              <Button fx:id="btnComparar" layoutX="252.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnCompararClicked" prefHeight="40.0" prefWidth="173.0" style="-fx-background-color: #61c5fc;" text="Comparar Arboles" textFill="WHITE" />
+                              <ComboBox fx:id="comboArboles2" layoutX="229.0" layoutY="270.0" prefHeight="40.0" prefWidth="244.0" />
+                              <Text layoutX="270.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comparar" wrappingWidth="160.32894897460938" />
+                              <Text layoutX="270.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Con" wrappingWidth="160.45199584960938" />
+                              <Label fx:id="txtRespuestaComparar" layoutX="257.0" layoutY="472.0" prefHeight="30.0" prefWidth="261.0" text="Respuesta" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="rootPane" layoutX="13.0" layoutY="15.0" prefHeight="530.0" prefWidth="670.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <TextField fx:id="textFieldValor" layoutX="50.0" layoutY="76.0" promptText="Valor del nodo" />
+                              <Button fx:id="btnNuevoArbol" layoutX="263.0" layoutY="32.0" onAction="#crearNuevoArbol" prefHeight="26.0" prefWidth="107.0" text="Nuevo Arbol" />
+                              <AnchorPane fx:id="grafoPane" layoutX="9.0" layoutY="110.0" prefHeight="430.0" prefWidth="652.0" />
+                              <TextField fx:id="textNombre" layoutX="50.0" layoutY="33.0" promptText="Nombre del Arbol" />
+                              <Button fx:id="btnCrearNodo" layoutX="263.0" layoutY="75.0" onAction="#crearNodo" prefHeight="26.0" prefWidth="106.0" text="Crear Nodo" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+    </children>
+</StackPane>

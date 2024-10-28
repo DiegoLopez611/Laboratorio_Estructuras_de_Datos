@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="530.0" prefWidth="670.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="controllers.GrafoUIController">
+    <TextField fx:id="textFieldValor" layoutX="50" layoutY="20" promptText="Valor del nodo" />
+    <Button fx:id="btnCrearNodo" layoutX="250" layoutY="20" onAction="#crearNodo" text="Crear Nodo" />
+    <!-- Pane para mostrar nodos y aristas -->
+    <AnchorPane fx:id="grafoPane" layoutX="120.0" layoutY="58.0" prefHeight="320" prefWidth="560" />
+</AnchorPane>
